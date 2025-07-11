@@ -1,0 +1,268 @@
+.schedule {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.schedule-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.schedule-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.schedule-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.schedule-tab {
+  padding: 1rem 2rem;
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #7f8c8d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-tab:hover {
+  border-color: #4CAF50;
+  color: #4CAF50;
+  transform: translateY(-2px);
+}
+
+.schedule-tab.active {
+  background: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+}
+
+.schedule-content {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.day-theme {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.day-theme h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.session-item {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.session-item:hover {
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.session-time {
+  font-weight: 700;
+  color: #4CAF50;
+  font-size: 1rem;
+}
+
+.session-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.session-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.session-speaker {
+  font-size: 1rem;
+  color: #4CAF50;
+  font-weight: 600;
+  margin: 0;
+}
+
+.session-location {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.session-type {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.schedule-legend {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.schedule-legend h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.legend-items {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .session-item {
+    grid-template-columns: 100px 1fr 100px;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule {
+    padding: 4rem 0;
+  }
+  
+  .schedule-header {
+    margin-bottom: 3rem;
+  }
+  
+  .schedule-tabs {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .schedule-tab {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .schedule-content {
+    padding: 2rem;
+  }
+  
+  .day-theme {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .day-theme h3 {
+    font-size: 1.5rem;
+  }
+  
+  .session-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .session-time {
+    font-size: 0.9rem;
+  }
+  
+  .session-title {
+    font-size: 1.1rem;
+  }
+  
+  .session-type {
+    justify-self: center;
+    max-width: 120px;
+  }
+  
+  .legend-items {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .schedule {
+    padding: 3rem 0;
+  }
+  
+  .schedule-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .schedule-tab {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .schedule-content {
+    padding: 1.5rem;
+  }
+  
+  .session-item {
+    padding: 1rem;
+  }
+  
+  .session-title {
+    font-size: 1rem;
+  }
+  
+  .session-speaker {
+    font-size: 0.9rem;
+  }
+  
+  .session-location {
+    font-size: 0.8rem;
+  }
+} 

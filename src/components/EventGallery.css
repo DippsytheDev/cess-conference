@@ -1,0 +1,243 @@
+.event-gallery-section {
+  padding: 60px 0;
+  background: #f7faf7;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #217a3a;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.photo-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.photo-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 16px rgba(33, 122, 58, 0.08);
+}
+
+.photo-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(33, 122, 58, 0.16);
+}
+
+.photo-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.photo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.photo-card:hover .photo-image img {
+  transform: scale(1.05);
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: #fff;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.photo-card:hover .photo-overlay {
+  opacity: 1;
+}
+
+.photo-info {
+  text-align: center;
+}
+
+.photo-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+.photo-category {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+  color: #e6f4ea;
+}
+
+.photo-year {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/* Photo Modal Styles */
+.photo-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.photo-modal-content {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 95vw;
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  animation: modalIn 0.3s;
+}
+
+@keyframes modalIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.photo-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+}
+
+.photo-modal-close:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.photo-modal-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.photo-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-modal-info {
+  padding: 1.5rem;
+}
+
+.photo-modal-title {
+  font-size: 1.5rem;
+  color: #217a3a;
+  margin-bottom: 0.5rem;
+}
+
+.photo-modal-description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.photo-modal-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.photo-modal-category {
+  background: #e6f4ea;
+  color: #217a3a;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.photo-modal-year {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .photo-gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .photo-modal-content {
+    width: 98vw;
+    max-height: 95vh;
+  }
+  
+  .photo-modal-image {
+    height: 250px;
+  }
+  
+  .photo-modal-info {
+    padding: 1rem;
+  }
+  
+  .photo-modal-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .photo-modal-image {
+    height: 200px;
+  }
+  
+  .photo-modal-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+} 
