@@ -15,10 +15,34 @@
 }
 
 .registration-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
+  min-height: 350px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.08);
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.registration-content .cta-button {
+  margin-top: auto;
+  padding: 0.75rem 2rem;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.registration-content .cta-button:hover {
+  background: #388e3c;
 }
 
 .pricing-section h3 {
